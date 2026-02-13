@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Kenangan Cinta - Hadiah Valentine Khusus</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8e8e8, #ffe6e6);
+            color: #5a4a4a;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 2s ease-in;
+        }
+        .intro h1 {
+            font-size: 2.5em;
+            color: #d2691e;
+            margin-bottom: 20px;
+        }
+        .intro p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .memory {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fefefe;
+            border-left: 5px solid #ffb6c1;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .memory:hover {
+            transform: scale(1.02);
+        }
+        .memory img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .surprise {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #d2691e, #ffb6c1);
+            color: white;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        .surprise.show {
+            display: block;
+            animation: slideUp 1s ease;
+        }
+        button {
+            background: #d2691e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #b8571f;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>✨ Selamat Datang di Ruang Kenangan Cinta ✨</h1>
+            <p>Hai, sayang. Ada sesuatu yang ingin aku bagi hari ini. Bukan sekadar kata-kata, tapi kenangan yang kita buat bersama. Klik tombol di bawah untuk memulai perjalanan kecil ini. Siap merasa hangat dan tersenyum? 😊</p>
+            <button onclick="startJourney()">Mulai Perjalanan</button>
+        </div>
+
+        <div id="story" class="section">
+            <h2>Perjalanan Cinta Kita</h2>
+            <p>Dari pertama kali kita bertemu di kafe itu—kamu dengan senyum malu-malu, aku yang gugup banget. Ingat ya, waktu itu aku hampir tumpah kopi karena terlalu fokus ke kamu. Sekarang, setelah sekian lama, perjalanan ini terasa seperti mimpi yang jadi nyata. Setiap hari bersamamu adalah petualangan baru, penuh tawa dan pelukan hangat.</p>
+        </div>
+
+        <div id="moments" class="section">
+            <h2>Momen-Momen Bermakna</h2>
+            <div class="memory">
+                <img src="https://via.placeholder.com/80x80/ffb6c1/ffffff?text=☕" alt="Kafe Pertama">
+                <div>
+                    <h3>Pertemuan Pertama di Kafe</h3>
+                    <p>Kopi pahit, tapi obrolan kita manis banget. Kamu cerita tentang hobi traveling, aku langsung jatuh hati.</p>
+                </div>
+            </div>
+            <div class="memory">
+                <img src="https://via.placeholder.com/80x80/d2691e/ffffff?text=🌅" alt="Jalan-Jalan Pagi">
+                <div>
+                    <h3>Jalan-Jalan Pagi di Taman</h3>
+                    <p>Waktu itu hujan gerimis, tapi kita tetap jalan sambil pegangan tangan. Kenangan sederhana yang selalu bikin aku senyum.</p>
+                </div>
+            </div>
+            <div class="memory">
+                <img src="https://via.placeholder.com/80x80/ffe4e1/ffffff?text=🍕" alt="Makan Pizza">
+                <div>
+                    <h3>Malam Pizza dan Film</h3>
+                    <p>Kamu suka topping ekstra keju, aku yang makan sambil ketawa karena filmnya lucu. Nostalgia banget!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="likes" class="section">
+            <h2>Hal-Hal yang Aku Sukai dari Kamu</h2>
+            <p>Cara kamu ketawa sampai mata sipit—itu selalu bikin hariku lebih cerah. Aku suka banget waktu kamu masak sarapan pagi, meski kadang gosong sedikit. Dan yang paling aku rindukan: pelukanmu yang hangat setelah hari yang capek. Kamu tahu kan, aku diam-diam suka banget cara kamu nyanyi lagu lama sambil berdansa konyol di dapur.</p>
+        </div>
+
+        <div id="messages" class="section">
+            <h2>Pesan dari Hati</h2>
+            <p>Terima kasih ya, sayang, karena sudah jadi bagian dari hidupku. Kamu bikin aku percaya kalau cinta itu nyata dan indah. Aku janji, aku akan selalu ada untukmu, seperti kamu selalu ada untukku. Happy Valentine, my love. 💕</p>
+        </div>
+
+        <div id="surprise" class="surprise">
+            <h2>Surprise! 🎉</h2>
+            <p>Aku ingin bilang, aku mencintaimu lebih dari kata-kata bisa ungkapkan. Harapan ke depan? Lebih banyak petualangan bersama, lebih banyak tawa, dan mungkin suatu hari kita bisa jalan-jalan ke tempat impianmu. Terima kasih karena kamu adalah cahaya di hidupku. Aku sayang kamu, selalu. 😘</p>
+        </div>
+    </div>
+
+    <script>
+        let sections = document.querySelectorAll('.section');
+        let surprise = document.getElementById('surprise');
+        let scrollCount = 0;
+
+        function startJourney() {
+            document.querySelector('.intro').style.display = 'none';
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('show');
+                }, index * 1000);
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            scrollCount++;
+            if (scrollCount > 10) { // Simulasi scroll hingga akhir
+                surprise.classList.add('show');
+            }
+        });
+
+        // Hover effects
+        document.querySelectorAll('.memory').forEach(memory => {
+            memory.addEventListener('mouseenter', () => {
+                memory.style.transform = 'scale(1.05)';
+            });
+            memory.addEventListener('mouseleave', () => {
+                memory.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
